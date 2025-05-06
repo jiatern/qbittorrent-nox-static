@@ -1215,6 +1215,7 @@ _set_module_urls() {
 	app_version[qtbase]="$(printf '%s' "${github_tag[qtbase]#v}" | sed 's/-lts-lgpl//g')"
 	app_version[qttools]="$(printf '%s' "${github_tag[qttools]#v}" | sed 's/-lts-lgpl//g')"
 	app_version[qbittorrent]="${github_tag[qbittorrent]#release-}"
+	app_version[qbittorrent]="${app_version[qbittorrent]%\_JT}"
 	##########################################################################################################################################################
 	# Configure the source_archive_url associative array for all the applications this script uses and we call them as ${source_archive_url[app_name]}
 	##########################################################################################################################################################
